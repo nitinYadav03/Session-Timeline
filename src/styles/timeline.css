@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+
+.timeline-container {
+  background-color: #1a1a1a;
+  border-radius: 8px;
+}
+
+.timeline-header {
+  margin-bottom: 16px;
+}
+
+.timeline-bar {
+  position: relative;
+  height: 2rem; 
+  display: flex;
+  align-items: center; 
+}
+
+.time-axis {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.participant-row {
+  margin-bottom: 12px;
+}
+
+.event {
+  position: absolute;
+  height: 8px;
+  background-color: #4c8bf5;
+  border-radius: 4px;
+  transition: opacity 0.2s ease;
+}
+
+.event.mic {
+  background-color: #4CAF50;
+}
+
+.event.webcam {
+  background-color: #9C27B0;
+}
+
+.event.screen-share {
+  background-color: #607D8B;
+}
+
+.event.error {
+  background-color: #F44336;
+}
+
+.event:hover {
+  opacity: 0.8;
+}
+
+.tooltip-container {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 40%;
+  cursor: pointer;
+}
+
+.tooltip {
+  visibility: hidden;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 4px;
+  position: absolute;
+  z-index: 10;
+  bottom: 125%; 
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font-size: 12px;
+  opacity: 0;
+  transition: opacity 0.1s ease-in-out; /* Removes delay */
+}
+
+.tooltip-container:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tooltip-container:hover {
+  opacity: 0.9;
+}
